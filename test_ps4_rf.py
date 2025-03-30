@@ -108,6 +108,12 @@ class MyController(Controller):
         with joystick_lock:
             joystick_R3_y = 0
 
+    def on_R1_press(self):
+        robot.toggle_weapon(1)
+
+    def on_R2_press(self, value):
+        robot.toggle_weapon(0)
+
 def joystick_reader():
     """Thread that continuously reads joystick values and sends commands"""
     prev_L3_y = 0  # Previous L3 Y-axis value

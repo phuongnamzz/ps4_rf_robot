@@ -75,6 +75,7 @@ class MyController(Controller):
         with joystick_lock:
             joystick_y = 0
 
+
 def joystick_reader():
     """Thread that continuously reads the joystick Y-axis value"""
     prev_y = 0  # Stores the previous Y value
